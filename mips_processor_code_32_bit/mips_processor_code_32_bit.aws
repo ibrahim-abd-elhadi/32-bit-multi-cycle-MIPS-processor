@@ -1,0 +1,13 @@
+[Version]
+Version=15.0
+[Designs]
+mips_processor_code_32_bit=mips_processor_code_32_bit.adf
+[Settings]
+Active=mips_processor_code_32_bit
+[Expand]
+mips_processor_code_32_bit=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1

@@ -1,7 +1,7 @@
 i<>.\src\memory.vhd
-i<>.\src\MemoryDataRegister.vhd
-i<>.\src\Registers .vhd
-i<>.\src\InstrReg.vhd
-i<>.\src\PCReg.vhd
 i<>.\src\AB_Reg.vhd
+i<>.\src\Registers.vhd
+i<>.\src\PCReg.vhd
+i<>.\src\MemoryDataRegister.vhd
+i<>.\src\InstrReg.vhd
 i<>.\src\ALUout.vhd

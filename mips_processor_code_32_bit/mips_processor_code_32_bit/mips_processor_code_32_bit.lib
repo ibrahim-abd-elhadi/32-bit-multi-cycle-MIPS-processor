@@ -1,0 +1,108 @@
+timestamp=1746118555994
+
+[~A]
+ModifyID=14
+Version=74
+
+[~MFT]
+0=2|0mips_processor_code_32_bit.mgf|19067|3760
+1=2|1mips_processor_code_32_bit.mgf|19226|8024
+3=2|3mips_processor_code_32_bit.mgf|6508|1621
+
+[ab_reg]
+A/behavioral=A/Behavioral 21|../src/AB_Reg.vhd|19|1*2376
+BinW64/behavioral=3*1096
+I=0*3392
+I/behavioral=I/Behavioral 0*4182
+M=11|2|vf5|1746117648494|../src/AB_Reg.vhd|0*2850*0xd14237af629550110df3d851999f1abc34022328|0*3315*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117648496|../src/AB_Reg.vhd|0*3630*0xad03bcbecfb7c3740aa84571aff63a1bd7973651|0*4091*0x20116f55b147878295aeff36dce7fc50
+R=../src/AB_Reg.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|7f584c98c8f56076ff0167b5e961439ff3d6d9e3c26892a4a1be0f4ba6dc1e5c
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff464d2a6c33acf6457b7c32296f35e9795
+
+[aluout]
+A/behavioral=A/Behavioral 21|../src/ALUout.vhd|17|1*19226
+BinW64/behavioral=3*6508
+I=0*17253
+I/behavioral=I/Behavioral 0*19067
+M=11|2|vf5|1746118151185|../src/write_enable .vhd|0*16767*0xb852fcd342d6e3a533d393cb6df9d1b3d0519672|0*17169*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746118555957|../src/write_enable .vhd|0*17491*0x00ada979e20fdba13dd541ce7ae8f7d9de34a3c8|0*18469*0x20116f55b147878295aeff36dce7fc50
+R=../src/write_enable .vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|36f15d2e487abf3629293a41d17917905d4705568f8d7498ac197b70f5063256
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff40dc1e60aaf9e41de6465a6823bce4169
+
+[instrreg]
+A/behavioral=A/Behavioral 21|../src/InstrReg.vhd|17|1*17751
+BinW64/behavioral=3*5919
+I=0*15505
+I/behavioral=I/Behavioral 0*18816
+M=11|2|vf5|1746118117640|../src/InstrReg.vhd|0*15042*0xc91dee903a004f3f47a6e2af51e1b3d93edb8704|0*15424*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746118467167|../src/InstrReg.vhd|0*15745*0x346c4be4ac0673e1cee502838803ac857ebb5785|0*16181*0x20116f55b147878295aeff36dce7fc50
+R=../src/InstrReg.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|8799c80f1a5d2d1bd1176eb346e815c0745ab7d252d29d4e879277d8c451bdbba5e3e0d0a9746ea691c5b42b27713704
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4af8b003893c598d7aeb84c67fb5f206a
+
+[instructionregister]
+A/behavioral=A/Behavioral 21|../src/InstrReg.vhd|17|1*9727
+BinW64/behavioral=3*3709
+I=0*11411
+I/behavioral=I/Behavioral 0*13056
+M=11|2|vf5|1746117968854|../src/InstrReg.vhd|0*10902*0x40f6c452721fb380f8dc0d10e4c103e9914c0ac8|0*11319*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117993758|../src/InstrReg.vhd|0*12490*0xf1f2ff98439d0a91d5c4293783448a7b71cb548b|0*12950*0x20116f55b147878295aeff36dce7fc50
+R=../src/InstrReg.vhd|10
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|c2dfea6876a83addfc916a98be3986d6492c0dc0e7530bb60eda9b7079a3ff3ebd0dac8b89b50be5a93d71203ad18e87
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4e5f60c14a3cebf4cce9e4c54fcefe8a8
+
+[memory]
+A/behavioral=A/Behavioral 21|../src/memory.vhd|17|1*0
+BinW64/behavioral=3*0
+I=0*712
+I/behavioral=I/Behavioral 0*2377
+M=11|2|vf5|1746117518875|../src/memory.vhd|0*229*0x0d3bc31d00079a0ef268eae64856bfc685ee3715|0*635*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117518877|../src/memory.vhd|0*950*0xde76551ea208011b3f366a7011a110116bedc11e|0*2286*0x20116f55b147878295aeff36dce7fc50
+R=../src/memory.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|fce057f312e65ae91f0ff41fc8956633aa1f7d32b707f497e4a89747c5928fc5
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff43b4060441beb772085f8c08b78130f86
+
+[memorydataregister]
+A/behavioral=A/Behavioral 21|../src/MemoryDataRegister.vhd|14|1*6985
+BinW64/behavioral=3*3148
+I=0*8687
+I/behavioral=I/Behavioral 0*9433
+M=11|2|vf5|1746117828138|../src/MemoryDataRegister.vhd|0*8223*0x8adcbc6a701ca5468cfb95128cb79a10a9744dfc|0*8586*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117828140|../src/MemoryDataRegister.vhd|0*8937*0x9da0969979c9acf24d9ba2d0695f14371a6d3b9e|0*9318*0x20116f55b147878295aeff36dce7fc50
+R=../src/MemoryDataRegister.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|c3db50e2d2943fe6899f6f1e6211a6e6ea879340755c86806a56b11090e9a29d7f8120e03bdeff687d66cb28b8ab959e
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff49030718713fe48cfd9e594a148082fe4
+
+[pcreg]
+A/behavioral=A/Behavioral 21|../src/PCReg.vhd|15|1*5952
+BinW64/behavioral=3*2639
+I=0*7153
+I/behavioral=I/Behavioral 0*7745
+M=11|2|vf5|1746117724788|../src/PCReg.vhd|0*6742*0x8d3cd0c04c49fcc03ee00be7047cb2bc7d3cf3c3|0*7078*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117724790|../src/PCReg.vhd|0*7390*0x2910669b94f4b9f00d55f09140a7c401dae08c9b|0*7656*0x20116f55b147878295aeff36dce7fc50
+R=../src/PCReg.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|1f9466e13140b6344d793a64b44e5b817eb4462cb72422833d98c999f2ebb470
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4b93fcd30a1af5234fd184a2479a0cc28
+
+[registers]
+A/behavioral=A/Behavioral 21|../src/Registers.vhd|20|1*4183
+BinW64/behavioral=3*1816
+I=0*5305
+I/behavioral=I/Behavioral 0*6274
+M=11|2|vf5|1746117683536|../src/Registers.vhd|0*4688*0xfffeb4a28f415a3b82b72a6e51b9a552a92076ad|0*5222*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavioral=M/Behavioral 21|2|vf5|1746117683538|../src/Registers.vhd|0*5546*0x5206fff6c626262050f80d1feec5ce2f9f1151b3|0*6177*0x20116f55b147878295aeff36dce7fc50
+R=../src/Registers.vhd|5
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|2314fdb2a4dd7301b5d97b47fbce135ee711739d3258eb7291525b46820d6d9993aa72e7aa84024338844cc0ebd67fd6
+Version/behavioral=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4530ac153db6c7e8e1d7e471a350b7a93
+
+[~U]
+ab_reg=AB_Reg 11|0*2626|
+aluout=ALUout 11|0*16527|
+instrreg=InstrReg 11|0*14800|
+instructionregister=InstructionRegister 11|0*10644|
+memory=Memory 11|0*0|
+memorydataregister=MemoryDataRegister 11|0*7993|
+pcreg=PCReg 11|0*6526|
+registers=Registers 11|0*4431|
