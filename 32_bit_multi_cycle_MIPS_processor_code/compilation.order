@@ -1,0 +1,7 @@
+.\src\memory.vhd
+.\src\MemoryDataRegister.vhd
+.\src\Registers .vhd
+.\src\InstrReg.vhd
+.\src\PCReg.vhd
+.\src\AB_Reg.vhd
+.\src\ALUout.vhd
