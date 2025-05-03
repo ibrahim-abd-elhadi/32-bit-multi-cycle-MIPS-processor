@@ -25,7 +25,7 @@ begin
 	-- test subtract
     ALU_control <= "0001"; 
     wait for 10 ns;
-    -- Test ADD
+    -- Test AND
     ALU_control <= "0010";
     wait for 10 ns;
 	-- Test OR
