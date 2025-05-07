@@ -11,8 +11,8 @@ signal ALU_control:std_logic_vector(3 downto 0);
 signal output :std_logic_vector(31 downto 0);
 begin
 L1: entity ALU
-    port map (operand_1 => input_1, 
-              operand_2 => input_2, 
+    port map (input_1 => input_1, 
+              input_2 => input_2, 
               ALU_control => ALU_control, 
               result => output);
          stim_proc: process
@@ -25,7 +25,7 @@ begin
 	-- test subtract
     ALU_control <= "0001"; 
     wait for 10 ns;
-    -- Test AND
+    -- Test ADD
     ALU_control <= "0010";
     wait for 10 ns;
 	-- Test OR
