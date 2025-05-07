@@ -26,7 +26,7 @@ begin
     -- subtract
     	input_1 - input_2 when ALU_control = "0001" else
     -- AND
-   		input_1 AND  input_2 when ALU_control = "0010" else
+   	input_1 AND  input_2 when ALU_control = "0010" else
     -- OR
     	input_1 OR   input_2 when ALU_control = "0011" else
     -- NOR
