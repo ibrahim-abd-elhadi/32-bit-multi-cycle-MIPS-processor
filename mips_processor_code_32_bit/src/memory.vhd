@@ -5,7 +5,6 @@ use ieee.numeric_std.all;
 entity Memory is
   port (
     clk         : in  std_logic;
-    reset_n     : in  std_logic;
     addr        : in  std_logic_vector(31 downto 0);
     write_en    : in  std_logic;
     read_en     : in  std_logic;
@@ -49,18 +48,18 @@ begin
     if rising_edge(clk) then
       if write_en = '1' then
         ram(to_integer(unsigned(addr)))     <= write_data(31 downto 24);
-        ram(to_integer(unsigned(addr) + 1)) <= write_data(23 downto 16);
-        ram(to_integer(unsigned(addr) + 2)) <= write_data(15 downto 8);
-        ram(to_integer(unsigned(addr) + 3)) <= write_data(7 downto 0);
+        ram(to_integer(unsigned(addr)) + 1) <= write_data(23 downto 16);
+        ram(to_integer(unsigned(addr)) + 2) <= write_data(15 downto 8);
+        ram(to_integer(unsigned(addr)) + 3) <= write_data(7 downto 0);
       end if;
     end if;
   end process;
 
  
   read_data <= ram(to_integer(unsigned(addr)))     &
-               ram(to_integer(unsigned(addr) + 1)) &
-               ram(to_integer(unsigned(addr) + 2)) &
-               ram(to_integer(unsigned(addr) + 3))
+               ram(to_integer(unsigned(addr)) + 1) &
+               ram(to_integer(unsigned(addr)) + 2) &
+               ram(to_integer(unsigned(addr)) + 3)
                when read_en = '1'
                else (others => '0');
 

@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity AB_Reg is
   port(
     clk        : in std_logic;
-    reset_n    : in std_logic;
+    reset    : in std_logic;
     in_A       : in std_logic_vector(31 downto 0);
     in_B       : in std_logic_vector(31 downto 0);
     in_ALUout  : in std_logic_vector(31 downto 0);
@@ -22,7 +22,7 @@ architecture Behavioral of AB_Reg is
 begin
   process(clk)
   begin
-    if reset_n = '0' then
+    if reset = '1' then
       regs <= (others => (others => '0'));
     elsif rising_edge(clk) then
       regs(0) <= in_A;

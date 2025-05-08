@@ -3,10 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity InstrReg  is
-  GENERIC(n : integer := 32);
   port( -- input
         clk             : in std_logic;
-        reset_n       : in std_logic;
+        reset       : in std_logic;
         IRWrite         : in std_logic;
         in_instruction  : in std_logic_vector(31 downto 0);
 
@@ -21,7 +20,7 @@ architecture Behavioral of InstrReg  is
 begin
   process(clk)
   begin
-    if reset_n = '0' then
+    if reset = '1' then
       instr_reg(0) <= (others => '0');
     else if rising_edge(clk) and IRWrite = '1' then
       instr_reg(0) <= in_instruction;

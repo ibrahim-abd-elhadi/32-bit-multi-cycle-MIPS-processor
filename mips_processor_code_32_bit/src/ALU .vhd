@@ -4,11 +4,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use ieee.numeric_std.all;
 
 entity ALU is
-  GENERIC(n : integer := 32);
   port( -- input
         input_1   : in std_logic_vector(31 downto 0);
         input_2   : in std_logic_vector(31 downto 0);
-        ALU_control : in std_logic_vector(3 downto 0);  -- 12 operations
+        ALU_control : in std_logic_vector(3 downto 0);  
 
         -- output
         result      : out std_logic_vector(31 downto 0);

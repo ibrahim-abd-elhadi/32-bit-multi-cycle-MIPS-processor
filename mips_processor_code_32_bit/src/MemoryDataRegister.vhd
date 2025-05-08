@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity MemoryDataRegister is
   port (
     clk      : in  std_logic;                           -- Clock signal
-    reset_n  : in  std_logic;                           -- Active-low reset
+    reset    : in  std_logic;                           -- Active-high reset
     data_in  : in  std_logic_vector(31 downto 0);       -- Input from memory
     data_out : out std_logic_vector(31 downto 0)        -- Output to MUX
   );
@@ -17,7 +17,7 @@ begin
 
   process(clk)
   begin
-    if reset_n = '0' then  -- Active-low reset
+    if reset = '1' then  -- Active-low reset
       reg_mem_data <= (others => '0');
     elsif rising_edge(clk) then
       reg_mem_data <= data_in;
