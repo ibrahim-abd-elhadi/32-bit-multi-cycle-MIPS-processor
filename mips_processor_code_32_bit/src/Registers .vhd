@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Registers is
   port (
     clk           : in  std_logic;                            -- Clock signal
-    reset_n       : in  std_logic;                            -- Active-low reset
+    reset         : in  std_logic;                            -- Active-high reset (clears all regs)
     address_in_1  : in  std_logic_vector(4 downto 0);         -- Read address 1
     address_in_2  : in  std_logic_vector(4 downto 0);         -- Read address 2
     write_address : in  std_logic_vector(4 downto 0);         -- Write address
@@ -22,17 +22,22 @@ architecture Behavioral of Registers is
   signal register_file : registers_array := (others => (others => '0'));
 begin
 
-  process(clk)
+  process(clk, reset)
   begin
-    if reset_n = '0' then
-      register_file(to_integer(unsigned(write_address))) <= (others => '0');
-    elsif rising_edge(clk) and write_enable = '1' then
-      register_file(to_integer(unsigned(write_address))) <= data_in;
+    if reset = '1' then
+      register_file <= (others => (others => '0'));
+    elsif rising_edge(clk) then
+      if write_enable = '1' and write_address /= "00000" then
+        register_file(to_integer(unsigned(write_address))) <= data_in;
+      end if;
     end if;
   end process;
-
-  -- Combinational read
-  data_out_1 <= register_file(to_integer(unsigned(address_in_1)));
-  data_out_2 <= register_file(to_integer(unsigned(address_in_2)));
-
+     
+  -- Register 0 is always hardwired to zero on reads:
+  data_out_1 <= (others => '0') when address_in_1 = "00000"
+    else register_file(to_integer(unsigned(address_in_1)));
+    
+  data_out_2 <= (others => '0') when address_in_2 = "00000"
+    else register_file(to_integer(unsigned(address_in_2)));		  
+  
 end Behavioral;

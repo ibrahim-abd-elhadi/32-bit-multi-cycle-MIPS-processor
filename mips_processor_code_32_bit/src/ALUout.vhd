@@ -1,48 +1,30 @@
-																		 library ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity ALUout is
-  GENERIC(n : integer := 32);
-  port( -- input
-        operand_1   : in std_logic_vector(31 downto 0);
-        operand_2   : in std_logic_vector(31 downto 0);
-        ALU_control : in std_logic_vector(3 downto 0);  -- 12 operations
+    port (
+        input  : in  std_logic_vector(31 downto 0);
+        output : out std_logic_vector(31 downto 0);
+        en     : in  std_logic;
+        reset  : in  std_logic;
+        clk    : in  std_logic
+    );
+end entity;
 
-        -- output
-        result      : out std_logic_vector(31 downto 0);
-        zero        : out std_logic );
-end ALUout;
-
-architecture Behavioral of ALUout is
-  signal temp : std_logic_vector(31 downto 0);
-
+architecture archReg of ALUout is 
+    signal regOut : std_logic_vector(31 downto 0) := (others => '0');
 begin
+    process (Clk,reset)
+    begin
+        if reset = '1' then
+            regOut <= (others => '0');
+        elsif rising_edge(Clk) then
+            if en = '1' then
+                regOut <= input;
+            end if;
+        end if;
+    end process;
 
-  temp <=
-    -- add
-    std_logic_vector(unsigned(operand_1) + unsigned(operand_2)) when ALU_control = "0000" else
-    -- subtract
-    std_logic_vector(unsigned(operand_1) - unsigned(operand_2)) when ALU_control = "0001" else
-    -- AND
-    operand_1 AND  operand_2 when ALU_control = "0010" else
-    -- OR
-    operand_1 OR   operand_2 when ALU_control = "0011" else
-    -- NOR
-    operand_1 NOR  operand_2 when ALU_control = "0100" else
-    -- NAND
-    operand_1 NAND operand_2 when ALU_control = "0101" else
-    -- XOR
-    operand_1 XOR  operand_2 when ALU_control = "0110" else
-    -- shift left logical
-    std_logic_vector(shift_left(unsigned(operand_1), to_integer(unsigned(operand_2(10 downto 6))))) when ALU_control = "0111" else
-    -- shift right logical
-    std_logic_vector(shift_right(unsigned(operand_1), to_integer(unsigned(operand_2(10 downto 6))))) when ALU_control = "1000" else
-    -- in other cases
-    (others => '0');
-
-  -- zero flag logic
-  zero <= '1' when temp = "00000000000000000000000000000000" else '0';
-  result <= temp;
-
-end Behavioral;
+    output <= regOut;
+end archReg;

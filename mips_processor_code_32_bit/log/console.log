@@ -1,0 +1,831 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Error: Cannot rename file "Registers.vhd" to "egisters.vhd"
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Registers .vhd"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Registers .vhd"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/registers_tb.vhd
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+asim -O5 +access +r +m+pcreg_tb pcreg_tb behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/PCReg.vhd
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5569 kB (elbread=427 elab2=5003 kernel=139 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  8:27 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+run 100 ns
+# EXECUTION:: NOTE   : PCReg testbench passed!
+# EXECUTION:: Time: 60 ns,  Iteration: 0,  Instance: /PCReg_tb,  Process: stim_proc.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Error: ELAB1_0011: MIPS.vhd : (215, 0): Port "reset_n" is on entity "Memory" but not on the component declaration.
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory.vhd
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Warning: ELAB1_0026: memory_tb.vhd : (37, 0): There is no default binding for component "Memory". (Port "reset_n" is not on the entity).
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory_tb.vhd
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Warning: ELAB1_0026: memory_tb.vhd : (37, 0): There is no default binding for component "Memory". (Port "reset_n" is not on the entity).
+# Compile success 0 Errors 1 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory.vhd
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Error: ELAB1_0011: MIPS.vhd : (215, 0): Port "reset_n" is on entity "Memory" but not on the component declaration.
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.3 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Error: ELAB1_0011: MIPS.vhd : (215, 0): Port "reset_n" is on entity "Memory" but not on the component declaration.
+# Error: COMP96_0078: MIPS.vhd : (218, 10): Unknown identifier "reset_n".
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MIPS.vhd
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Error: COMP96_0078: MIPS.vhd : (219, 9): Unknown identifier "reset_n".
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Warning: ELAB1_0026: memory_tb.vhd : (37, 0): There is no default binding for component "Memory". (Port "reset_n" is not on the entity).
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/PCReg.vhd
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MemoryDataRegister.vhd
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/InstrReg.vhd
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/ALUout.vhd
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/ALUout.vhd
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd"
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Warning: ELAB1_0026: memory_tb.vhd : (37, 0): There is no default binding for component "Memory". (Port "reset_n" is not on the entity).
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/ALU .vhd"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Error: COMP96_0118: ALU .vhd : (31, 28): Keyword 'others' is not allowed in unconstrained array aggregate.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/controlfsm.vhd
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/controlfsm.vhd
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux2 .vhd"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/Mux2_5.vhd
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux3 .vhd"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux4 .vhd"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/ALU .vhd"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/tb_MIBS.vhd
+# Compile Entity "tb_MIPS"
+# Compile Architecture "Behavioral" of Entity "tb_MIPS"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: The contents of entity 'mips_processor_code_32_bit.alu' instantiated in architecture 'mips_processor_code_32_bit.MIPS(behave)' differ from the contents available during the compilation of this architecture.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: The contents of entity 'mips_processor_code_32_bit.alu' instantiated in architecture 'mips_processor_code_32_bit.MIPS(behave)' differ from the contents available during the compilation of this architecture.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd $dsn/src/PCReg.vhd "$dsn/src/Registers .vhd" $dsn/src/memory.vhd $dsn/src/MemoryDataRegister.vhd $dsn/src/InstrReg.vhd $dsn/src/ALUout.vhd $dsn/src/memory_tb.vhd $dsn/src/ab_reg_tb.vhd $dsn/src/registers_tb.vhd $dsn/src/PCReg_tb.vhd $dsn/src/MemoryDataRegister_tb.vhd $dsn/src/ALUout_tb.vhd $dsn/src/InstrReg_tb.vhd "$dsn/src/ALU .vhd" $dsn/src/ALUControl.vhd $dsn/src/controlfsm.vhd $dsn/src/MIPS.vhd "$dsn/src/Mux2 .vhd" $dsn/src/Mux2_5.vhd "$dsn/src/Mux3 .vhd" "$dsn/src/Mux4 .vhd" "$dsn/src/ShiftLeft .vhd" "$dsn/src/ShiftLeft2 .vhd" "$dsn/src/SignExtend .vhd" $dsn/src/tb_MIBS.vhd
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Warning: ELAB1_0026: memory_tb.vhd : (37, 0): There is no default binding for component "Memory". (Port "reset_n" is not on the entity).
+# Compile Entity "AB_Reg_tb"
+# Compile Architecture "Behavioral" of Entity "AB_Reg_tb"
+# Compile Entity "Registers_tb"
+# Compile Architecture "Behavioral" of Entity "Registers_tb"
+# Compile Entity "PCReg_tb"
+# Compile Architecture "Behavioral" of Entity "PCReg_tb"
+# Compile Entity "MemoryDataRegister_tb"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister_tb"
+# Compile Entity "ALUout_tb"
+# Compile Architecture "Behavioral" of Entity "ALUout_tb"
+# Compile Entity "InstrReg_tb"
+# Compile Architecture "Behavioral" of Entity "InstrReg_tb"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile Entity "tb_MIPS"
+# Compile Architecture "Behavioral" of Entity "tb_MIPS"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.4 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/tb_MIBS.vhd
+# Compile Entity "tb_MIPS"
+# Compile Architecture "Behavioral" of Entity "tb_MIPS"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim -O5 +access +r +m+tb_mips tb_mips behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:39 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+# VSIM: 3 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/alqay/OneDrive/Desktop/hardware project/32-bit-multi-cycle-MIPS-processor/mips_processor_code_32_bit/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__37.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__40.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# EXECUTION:: NOTE   : End of simulation
+# EXECUTION:: Time: 2000300 ns,  Iteration: 0,  Instance: /tb_MIPS,  Process: stim_proc.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/tb_MIBS.vhd
+# Compile Entity "tb_MIPS"
+# Compile Architecture "Behavioral" of Entity "tb_MIPS"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim -O5 +access +r +m+tb_mips tb_mips behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:44 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:45 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb_mips tb_mips behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:45 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+# VSIM: 3 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/alqay/OneDrive/Desktop/hardware project/32-bit-multi-cycle-MIPS-processor/mips_processor_code_32_bit/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__37.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__40.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# EXECUTION:: NOTE   : Simulation finished.
+# EXECUTION:: Time: 2 us,  Iteration: 0,  Instance: /tb_MIPS,  Process: stim_proc.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MIPS_tb.vhd
+# Compile Entity "MIPS_tb"
+# Compile Architecture "sim" of Entity "MIPS_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MIPS_tb.vhd
+# Compile Entity "MIPS_tb"
+# Compile Architecture "sim" of Entity "MIPS_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim -O5 +access +r +m+tb_mips tb_mips behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:49 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__37.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__40.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# EXECUTION:: NOTE   : Simulation finished.
+# EXECUTION:: Time: 2 us,  Iteration: 0,  Instance: /tb_MIPS,  Process: stim_proc.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +r +m+tb_mips tb_mips behavioral
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6632 kB (elbread=427 elab2=6065 kernel=140 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\alqay\OneDrive\Desktop\hardware project\32-bit-multi-cycle-MIPS-processor\mips_processor_code_32_bit\src\wave.asdb
+#  9:52 PM, Saturday, May 10, 2025
+#  Simulation has been initialized
+# VSIM: 3 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/alqay/OneDrive/Desktop/hardware project/32-bit-multi-cycle-MIPS-processor/mips_processor_code_32_bit/src/wave.asdb'.
+run
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__37.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /tb_MIPS/UUT/registers_comp,  Process: line__40.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /tb_MIPS/UUT/memory_comp,  Process: line__67.
+# EXECUTION:: NOTE   : Simulation finished.
+# EXECUTION:: Time: 2 us,  Iteration: 0,  Instance: /tb_MIPS,  Process: stim_proc.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory_tb.vhd
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Error: COMP96_0078: memory_tb.vhd : (38, 27): Unknown identifier "reset_n".
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory_tb.vhd
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory_tb.vhd
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MIPS.vhd
+# Compile Entity "MIPS"
+# Compile Architecture "behave" of Entity "MIPS"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/ALUout.vhd
+# Compile Entity "ALUout"
+# Compile Architecture "archReg" of Entity "ALUout"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory_tb.vhd
+# Compile Entity "Memory_tb"
+# Compile Architecture "Behavioral" of Entity "Memory_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MIPS_tb.vhd
+# Compile Entity "MIPS_tb"
+# Compile Architecture "sim" of Entity "MIPS_tb"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/tb_MIBS.vhd
+# Compile Entity "tb_MIPS"
+# Compile Architecture "Behavioral" of Entity "tb_MIPS"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/MemoryDataRegister.vhd
+# Compile Entity "MemoryDataRegister"
+# Compile Architecture "Behavioral" of Entity "MemoryDataRegister"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/ALU .vhd"
+# Compile Entity "ALU"
+# Compile Architecture "Behavioral" of Entity "ALU"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux4 .vhd"
+# Compile Entity "Mux4"
+# Compile Architecture "Behavioral" of Entity "Mux4"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux3 .vhd"
+# Compile Entity "Mux3"
+# Compile Architecture "Behavioral" of Entity "Mux3"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/Mux2_5.vhd
+# Compile Entity "Mux2_5"
+# Compile Architecture "Behavioral" of Entity "Mux2_5"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Mux2 .vhd"
+# Compile Entity "Mux2"
+# Compile Architecture "Behavioral" of Entity "Mux2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/controlfsm.vhd
+# Compile Entity "ControlFSM"
+# Compile Architecture "behave" of Entity "ControlFSM"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/InstrReg.vhd
+# Compile Entity "InstrReg"
+# Compile Architecture "Behavioral" of Entity "InstrReg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/PCReg.vhd
+# Compile Entity "PCReg"
+# Compile Architecture "Behavioral" of Entity "PCReg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/memory.vhd
+# Compile Entity "Memory"
+# Compile Architecture "Behavioral" of Entity "Memory"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/AB_Reg.vhd
+# Compile Entity "AB_Reg"
+# Compile Architecture "Behavioral" of Entity "AB_Reg"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/Registers .vhd"
+# Compile Entity "Registers"
+# Compile Architecture "Behavioral" of Entity "Registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  $dsn/src/ALUControl.vhd
+# Compile Entity "ALUControl"
+# Compile Architecture "behave" of Entity "ALUControl"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/ShiftLeft .vhd"
+# Compile Entity "ShiftLeft"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/ShiftLeft2 .vhd"
+# Compile Entity "ShiftLeft2"
+# Compile Architecture "Behavioral" of Entity "ShiftLeft2"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work mips_processor_code_32_bit -2002  "$dsn/src/SignExtend .vhd"
+# Compile Entity "SignExtend"
+# Compile Architecture "Behavioral" of Entity "SignExtend"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]

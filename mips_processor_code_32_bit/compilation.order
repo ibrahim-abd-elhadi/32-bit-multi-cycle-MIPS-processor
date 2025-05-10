@@ -1,7 +1,27 @@
-.\src\memory.vhd
 .\src\AB_Reg.vhd
-.\src\Registers.vhd
 .\src\PCReg.vhd
+.\src\Registers .vhd
+.\src\memory.vhd
 .\src\MemoryDataRegister.vhd
 .\src\InstrReg.vhd
 .\src\ALUout.vhd
+.\src\memory_tb.vhd
+.\src\ab_reg_tb.vhd
+.\src\registers_tb.vhd
+.\src\PCReg_tb.vhd
+.\src\MemoryDataRegister_tb.vhd
+.\src\ALUout_tb.vhd
+.\src\InstrReg_tb.vhd
+.\src\ALU .vhd
+.\src\ALUControl.vhd
+.\src\controlfsm.vhd
+.\src\MIPS.vhd
+.\src\Mux2 .vhd
+.\src\Mux2_5.vhd
+.\src\Mux3 .vhd
+.\src\Mux4 .vhd
+.\src\ShiftLeft .vhd
+.\src\ShiftLeft2 .vhd
+.\src\SignExtend .vhd
+.\src\tb_MIBS.vhd
+.\src\MIPS_tb.vhd
