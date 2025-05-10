@@ -5,7 +5,6 @@ use ieee.numeric_std.all;
 entity Memory is
   port (
     clk         : in  std_logic;
-    reset_n     : in  std_logic;
     addr        : in  std_logic_vector(31 downto 0);
     write_en    : in  std_logic;
     read_en     : in  std_logic;
@@ -35,33 +34,45 @@ architecture Behavioral of Memory is
     20 => "00001000", 21 => "00000000", 22 => "00000000", 23 => "00000011",  -- j 3
     24 => "00000000", 25 => "00100010", 26 => "00000000", 27 => "00100000",  -- add Zero,Temp1,Temp2
     28 => "10001110", 29 => "10001010", 30 => "00000000", 31 => "00101111",  -- lw ResultReg,47(MemBaseReg)
-
-  
     50 => "00000001",
-
     others => "00000000"
   );
 
+  -- Safe addressing: Only use bottom 6 bits of the address (range 0-63)
+  function safe_addr(addr_slv: std_logic_vector(31 downto 0)) return integer is
+  begin
+    return to_integer(unsigned(addr_slv(5 downto 0)));
+  end function;
+
 begin
 
+  -- Synchronous write process
   process(clk)
+    variable idx : integer;
   begin
     if rising_edge(clk) then
       if write_en = '1' then
-        ram(to_integer(unsigned(addr)))     <= write_data(31 downto 24);
-        ram(to_integer(unsigned(addr) + 1)) <= write_data(23 downto 16);
-        ram(to_integer(unsigned(addr) + 2)) <= write_data(15 downto 8);
-        ram(to_integer(unsigned(addr) + 3)) <= write_data(7 downto 0);
+        idx := safe_addr(addr);
+        if idx <= 60 then  -- Prevent out of range on 32-bit writes
+          ram(idx    ) <= write_data(31 downto 24);
+          ram(idx + 1) <= write_data(23 downto 16);
+          ram(idx + 2) <= write_data(15 downto 8);
+          ram(idx + 3) <= write_data(7 downto 0);
+        end if;
       end if;
     end if;
   end process;
 
- 
-  read_data <= ram(to_integer(unsigned(addr)))     &
-               ram(to_integer(unsigned(addr) + 1)) &
-               ram(to_integer(unsigned(addr) + 2)) &
-               ram(to_integer(unsigned(addr) + 3))
-               when read_en = '1'
-               else (others => '0');
+  -- Combinational read process to safely access data
+  process(addr, read_en, ram)
+    variable idx: integer;
+  begin
+    idx := safe_addr(addr);
+    if read_en = '1' and idx <= 60 then
+      read_data <= ram(idx) & ram(idx + 1) & ram(idx + 2) & ram(idx + 3);
+    else
+      read_data <= (others => '0');
+    end if;
+  end process;
 
 end Behavioral;
