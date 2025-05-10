@@ -15,6 +15,7 @@ end Mux2_5;
 architecture Behavioral of Mux2_5 is
 begin
   with mux_select select
-    output <= input_1 when '0', input_2 when others;
-
+  		output <= input_1 when '0',
+		  		  input_2 when '1',
+		  		  (others => '0') when others;
 end Behavioral;
